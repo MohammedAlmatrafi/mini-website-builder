@@ -3,7 +3,7 @@
 import { useContext, useState } from "react";
 import { availableSections } from "../availableSections";
 import dynamic from "next/dynamic";
-import { designContext } from "../page";
+import { designContext } from "@/app/_contexts/design-context";
 import { designContextType } from "@/types/types";
 import { PiExportBold } from "react-icons/pi";
 import { IoMdSearch } from "react-icons/io";

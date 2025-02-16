@@ -1,20 +1,20 @@
 "use client";
 import { useDroppable } from "@dnd-kit/core";
 import { twMerge } from "tailwind-merge";
-import { type pageDesign } from "@/types/types";
+import { designContextType } from "@/types/types";
 import { SectionWrapper } from "./sections";
 import { availableSections } from "../availableSections";
 import {
   SortableContext,
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
+import { useContext } from "react";
+import { designContext } from "@/app/_contexts/design-context";
 
-const DroppablePreview = ({
-  currentDesign,
-}: {
-  currentDesign: pageDesign[];
-}) => {
+const DroppablePreview = () => {
   const { setNodeRef } = useDroppable({ id: "preview" });
+
+  const { currentDesign } = useContext(designContext) as designContextType;
 
   return (
     <main

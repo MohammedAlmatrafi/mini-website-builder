@@ -10,9 +10,9 @@ import {
 } from "react-icons/fa6";
 import { RiExpandUpDownLine } from "react-icons/ri";
 import { IoCall } from "react-icons/io5";
-import { designContext } from "../page";
 import { designContextType } from "@/types/types";
 import Image from "next/image";
+import { designContext } from "@/app/_contexts/design-context";
 
 export const SectionWrapper = ({
   id,
